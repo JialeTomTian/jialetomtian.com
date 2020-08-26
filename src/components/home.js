@@ -1,29 +1,43 @@
 import React from "react";
 import Particles from "react-particles-js";
 import "./home.css";
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from "@material-ui/core/styles";
+
+const WhiteTextTypography = withStyles({
+  root: {
+    color: "#FFFFFF"
+  }
+})(Typography);
 
 const HomePage = () => {
   return (
     <div
       style={{
-        height: "800px",
+        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
       <div className="content">
-        Jiale Tom Tian <br /> 
-        2B Computer Science Student <br />
-        University of Waterloo
+       <WhiteTextTypography variant="h1">
+        Jiale Tom Tian
+       </WhiteTextTypography>
+       <WhiteTextTypography variant="h4">
+        2B CS @ University of Waterloo
+       </WhiteTextTypography>
       </div>
       <Particles
         className="particles"
-        height={1000}
+        height={"100vh"}
         params={{
+          background: {
+            color: "15b3fe"
+          }, 
           particles: {
             color: {
-              value: "0093DA",
+              value: "#ffffff",
             },
             number: {
               value: 80,
@@ -42,7 +56,7 @@ const HomePage = () => {
             line_linked: {
               enable: true,
               color: {
-                value: "0093DA",
+                value: "#ffffff",
               },
             },
             move: {
