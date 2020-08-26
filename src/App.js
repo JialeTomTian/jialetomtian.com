@@ -5,12 +5,14 @@ import Projects from "./components/projects.js";
 import AppBar from "@material-ui/core/AppBar";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Skills from "./components/skills.js";
 
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: "#00A7F7", contrastText: "#fff" },
+    primary: { main: "#00A7F7", contrastText: "#fff"},
     secondary: { main: "#FFFFFF", contrastText: "#fff" },
+    info: {main:"#0093DA", contrastText: "#fff"}
   },
   card:{
     backgroundColor: "#0098DA"
@@ -64,6 +66,7 @@ function App() {
         </AppBar>
         <HomePage></HomePage>
         <Projects />
+        <Skills/>
       </div>
     </ThemeProvider>
   );

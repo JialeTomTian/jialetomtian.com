@@ -10,16 +10,19 @@ import Button from "@material-ui/core/Button";
 import Slide from "@material-ui/core/Slide";
 import VisibilitySensor from "react-visibility-sensor";
 import { projectList } from "./websiteDetails";
+import EatingProject from "../images/EatingProject.PNG";
+import Subletty from "../images/Subletty.PNG";
+import wordDocumentWriter from "../images/wordDocumentWriter.PNG";
 
 const Projects = (props) => {
   const [loadProjects, setLoadProjects] = React.useState(false);
-  React.useEffect(()=>{
-    console.log(projectList);
-  })
-  const classes=props;
+  const images = [EatingProject, "", Subletty, wordDocumentWriter];
+
+  const classes = props;
   return (
     <div style={{ marginTop: "2vh" }}>
       <VisibilitySensor
+        partialVisibility={"bottom"}
         onChange={(isVisible) => {
           console.log(isVisible);
           setTimeout(() => {
@@ -30,7 +33,11 @@ const Projects = (props) => {
         }}
       >
         <React.Fragment>
-          <Typography variant="h2" style={{ marginBottom: "20px" }}>
+          <Typography
+            variant="h2"
+            style={{ marginBottom: "20px" }}
+            color="primary"
+          >
             Projects
           </Typography>
           <Slide
@@ -39,9 +46,8 @@ const Projects = (props) => {
             timeout={{ enter: 1000, exit: 1000 }}
           >
             <Grid container spacing={4} justify="center">
-            {projectList.map((project) => {
-              return (
-
+              {projectList.map((project, index) => {
+                return (
                   <Grid
                     xs={8}
                     md={4}
@@ -53,22 +59,23 @@ const Projects = (props) => {
                           component="img"
                           alt={project.title}
                           height="250px"
-                          image={project.img}
+                          image={images[project.img]}
                         />
                         <CardContent>
                           <Typography
                             gutterBottom
                             variant="h5"
                             component="h2"
+                            color="primary"
                           >
                             {project.title}
                           </Typography>
                           <Typography
                             variant="body2"
-                            color="textSecondary"
+                            color="primary"
                             component="p"
                           >
-                            {project.description} <br/>
+                            {project.description} <br />
                             {project.createdUsing}
                           </Typography>
                         </CardContent>
@@ -80,9 +87,8 @@ const Projects = (props) => {
                       </CardActions>
                     </Card>
                   </Grid>
-                
-              );
-            })}
+                );
+              })}
             </Grid>
           </Slide>
         </React.Fragment>
