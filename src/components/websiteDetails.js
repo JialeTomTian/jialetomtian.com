@@ -58,5 +58,34 @@ export const skillsList = [
     {
         title: "SQL",
         link: "https://diamanti.com/wp-content/uploads/2019/10/postgresql.png"
+    },
+]
+
+export const experienceList = [
+    {
+        location: "Ctrl V Waterloo",
+        position: "Full Stack Developer",
+        description: `I worked on various company web platforms using the PERN stack
+        (Postgres, Express, React, Node). I moved a main company revenue stream by planning, designing
+        developing and testing a online gift card system from scratch. This process involved not
+        only designing the frontend of the portal but also working on the backend to register gift cards with
+        encryption to ensure security. The current physical gift card system has registered over 450000 transactions,
+        and this new system aims to move all future transactions online. I also implemented a customer communication system
+        through online emails and Facebook Customer chat SDK that is currently use by 19 branches across North America.
+        The email portion involves working on the pre-exising company Node.js and Express server while the
+        Facebook Customer Chat involves working with a third party API. Finally, I spent time upgrading the company
+        website webcache and developer portal for VR game payments. During this process, I worked from home while
+        effectively communicating with my supervisor.`
+    },
+    {
+        location: "Vaughan Secondary School",
+        position: "DECA Chapter President",
+        description: `As DECA chapter president, I led the daily operations of a club with
+        a group of over 50 students and 7 executives. Thoughout the year, I led the trainning of various business
+        concepts in order to prepare students for the regional, provincial and international level competition. On
+        top of this, I also led three fundraisers during the year that raised over 3500 dollars for the
+        international competition trip. As a DECA competitor, I won first place internationall against 8000 competitors
+        in the business finance category in 2018 and got finalist position (top 20) internationall in 2019.
+        `
     }
 ]

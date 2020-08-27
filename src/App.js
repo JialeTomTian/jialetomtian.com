@@ -6,6 +6,8 @@ import AppBar from "@material-ui/core/AppBar";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Skills from "./components/skills.js";
+import Experiences from "./components/experience"
+import BottomBar from './components/BottomBar'
 
 
 const theme = createMuiTheme({
@@ -67,6 +69,8 @@ function App() {
         <HomePage></HomePage>
         <Projects />
         <Skills/>
+        <Experiences/>
+        <BottomBar/>
       </div>
     </ThemeProvider>
   );

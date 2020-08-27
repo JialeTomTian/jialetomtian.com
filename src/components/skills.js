@@ -32,12 +32,12 @@ const Skills = () => {
           if (isVisible) {
             setLoadSkills(true);
           }
-        }, 500);
+        }, 400);
       }}
     >
       <React.Fragment>
-        <Typography variant="h2" style={{ margin: "30px" }} color="primary">
-          Tools
+        <Typography variant="h2" style={{ marginTop: "70px" }} color="primary">
+          Skills
         </Typography>
         <Slide
           direction="left"
@@ -48,7 +48,7 @@ const Skills = () => {
             style={{
               marginLeft: "100px",
               marginRight: "100px",
-              marginBottom: "100px",
+              marginBottom: "150px",
             }}
           >
             <Swiper

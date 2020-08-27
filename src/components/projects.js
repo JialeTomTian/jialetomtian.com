@@ -14,6 +14,7 @@ import EatingProject from "../images/EatingProject.PNG";
 import Subletty from "../images/Subletty.PNG";
 import wordDocumentWriter from "../images/wordDocumentWriter.PNG";
 
+
 const Projects = (props) => {
   const [loadProjects, setLoadProjects] = React.useState(false);
   const images = [EatingProject, "", Subletty, wordDocumentWriter];
@@ -29,7 +30,7 @@ const Projects = (props) => {
             if (isVisible) {
               setLoadProjects(true);
             }
-          }, 500);
+          }, 400);
         }}
       >
         <React.Fragment>
