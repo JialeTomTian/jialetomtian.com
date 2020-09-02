@@ -5,31 +5,48 @@ export const projectList = [
         createdUsing: "Created using Postgres Node React and Express",
         img: 0,
         technologies: "Postgress, React, Node, Express (PERN STACK)",
-        description: ```After a year of trying to decide where to have food, I finally decided to create an application that aims to solve this problem.
+        descriptionT: `After a year of trying to decide where to have food, I finally decided to create an application that aims to solve this problem.
         Where to Eat is an web app that takes in a number of restaurant options each with a priority rating and randomly decides on a location. The program also features
         a backend database using Postgres which keeps track of all restaurants that people have visited in the nearby area. Through this project, I hope to be finally able to make a decision
         on food with my friends. :D
-        ```
+        `,
+        github: "https://github.com/JialeTomTian/Eating_Project"
     }, 
     {
         title: "Stock Data Scraper",
         description: "Scrap Stock Information from Wall Street Journal and Presents Them In a User Friendly Frontend",
         createdUsing: "Created Using Flask, Python, Beautiful Soup, React",
         img: 1,
-        technologies: ```Stock data scraper is a project designed to learn web scraping with Python. To further my interests in finance, I decided to 
-        ```
+        technologies: `Python, Flask, React, BeautifulSoup
+        `,
+        descriptionT: `Stock data scraper is a project designed to learn web scraping with Python. To further my interests in finance, I decided to create program
+        that gathers stock information from the Wall Street Journal. The data displayed on the frontend is communicated from the flask server which fetches the information
+        using BeautifulSoup, a web scraping tool for Python 3.
+        `,
+        github:"https://github.com/JialeTomTian/Eating_Project" 
     },
     {
         title: "Subletty",
         description: "Created At Starter Hacks 2020, Subletty Serves as a Platform That Allows Waterloo Students to Easily Find Sublets During Hectic Study Terms",
         createdUsing: "Created Using: React, Firebase",
-        img: 2
+        img: 2,
+        technologies: `React, Firebase`,
+        descriptionT: `In order to tackle the problem with finding a sublet in Waterloo, three teammates and I decided to create an online platform to allow students to easily
+        communicate about new listings on the market. The web platform uses React as the frontend and uses Firebase to both store the listing data but also allow user
+        authentication. This project was done in under 24 hours and involved collaboration among the four teammates to make the final functioning product.
+        `,
+        github:"https://github.com/JialeTomTian/StarterHacks2020"
     },
     {
         title: "Voice Controlled Word Document Writer",
         description: "A Voiced Controlled Word Document Writer Designed to Help Those Who Have Typing Disabilities and to Help Those Who Are Simply Lazy :)",
         createdUsing: "Created Using Python and Google Cloud Voice to Speech",
-        img: 3
+        img: 3,
+        technologies: "Python, Google Cloud Voice",
+        descriptionT: `After getting tired of typing on the computer, I decided to create a program that uses voice input to edit word documents. Through this
+        project, I was also able to use different python packages as well as work with the Google Cloud Compute Platform.
+        `,
+        github: "https://github.com/JialeTomTian/VoiceControlMSWord"
     }
 ]
 

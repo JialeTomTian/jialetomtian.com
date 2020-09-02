@@ -13,13 +13,52 @@ import { projectList } from "./websiteDetails";
 import EatingProject from "../images/EatingProject.PNG";
 import Subletty from "../images/Subletty.PNG";
 import wordDocumentWriter from "../images/wordDocumentWriter.PNG";
-
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
 
 const Projects = (props) => {
   const [loadProjects, setLoadProjects] = React.useState(false);
-  const images = [EatingProject, "https://s.wsj.net/img/meta/wsj-social-share.png", Subletty, wordDocumentWriter];
+  const images = [
+    EatingProject,
+    "https://s.wsj.net/img/meta/wsj-social-share.png",
+    Subletty,
+    wordDocumentWriter,
+  ];
+
+  const [dialogList, setDialogList] = React.useState(
+    projectList.map((project) => {
+      return false;
+    })
+  );
 
   const classes = props;
+  const [buffer, setBuffer] = React.useState(false);
+
+  const openDialog = (index) => {
+    let tempList = dialogList;
+    tempList[index] = true;
+    setDialogList(tempList);
+    if (buffer) {
+      setBuffer(false);
+    } else {
+      setBuffer(true);
+    }
+  };
+
+  const closeDialog = (index) => {
+    let tempList = dialogList;
+    tempList[index] = false;
+    setDialogList(tempList);
+    if (buffer) {
+      setBuffer(false);
+    } else {
+      setBuffer(true);
+    }
+  };
+
   return (
     <div style={{ marginTop: "2vh" }}>
       <VisibilitySensor
@@ -55,7 +94,11 @@ const Projects = (props) => {
                     style={{ margin: "20px", textAlign: "center" }}
                   >
                     <Card className={classes.card}>
-                      <CardActionArea>
+                      <CardActionArea
+                        onClick={() => {
+                          openDialog(index);
+                        }}
+                      >
                         <CardMedia
                           component="img"
                           alt={project.title}
@@ -82,11 +125,65 @@ const Projects = (props) => {
                         </CardContent>
                       </CardActionArea>
                       <CardActions>
-                        <Button size="small" color="primary">
-                          Git Hub Repository
-                        </Button>
+                        <a
+                          href={project.github}
+                          style={{ textDecoration: "none" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button size="small" color="primary">
+                            Git Hub Repository
+                          </Button>
+                        </a>
                       </CardActions>
                     </Card>
+                    <Dialog
+                      open={dialogList[index]}
+                      onClose={() => {
+                        closeDialog(index);
+                      }}
+                      aria-labelledby="alert-dialog-title"
+                      aria-describedby="alert-dialog-description"
+                    >
+                      <DialogTitle id="alert-dialog-title">
+                        {project.title} <br />
+                        {project.technologies}
+                      </DialogTitle>
+                      <DialogContent>
+                        <DialogContentText
+                          style={{ fontSize: "20px" }}
+                          id="alert-dialog-description"
+                        >
+                          {project.descriptionT}
+                        </DialogContentText>
+                        <center>
+                         <a
+                          href={project.github}
+                          style={{ textDecoration: "none" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        > 
+                            <Button
+                              style={{ backgroundColor: "#0093DA" }}
+                              color="secondary"
+                            >
+                              Github Code
+                            </Button>
+                          </a>
+                        </center>
+                      </DialogContent>
+                      <DialogActions>
+                        <Button
+                          color="primary"
+                          autoFocus
+                          onClick={() => {
+                            closeDialog(index);
+                          }}
+                        >
+                          Close
+                        </Button>
+                      </DialogActions>
+                    </Dialog>
                   </Grid>
                 );
               })}
