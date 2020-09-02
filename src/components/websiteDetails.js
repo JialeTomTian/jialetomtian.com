@@ -3,14 +3,21 @@ export const projectList = [
         title: "Where To Eat",
         description: "A Web Application Designed to Help Users Decide Where to Eat Out",
         createdUsing: "Created using Postgres Node React and Express",
-        img: 0
-
+        img: 0,
+        technologies: "Postgress, React, Node, Express (PERN STACK)",
+        description: ```After a year of trying to decide where to have food, I finally decided to create an application that aims to solve this problem.
+        Where to Eat is an web app that takes in a number of restaurant options each with a priority rating and randomly decides on a location. The program also features
+        a backend database using Postgres which keeps track of all restaurants that people have visited in the nearby area. Through this project, I hope to be finally able to make a decision
+        on food with my friends. :D
+        ```
     }, 
     {
         title: "Stock Data Scraper",
         description: "Scrap Stock Information from Wall Street Journal and Presents Them In a User Friendly Frontend",
         createdUsing: "Created Using Flask, Python, Beautiful Soup, React",
-        img: 1
+        img: 1,
+        technologies: ```Stock data scraper is a project designed to learn web scraping with Python. To further my interests in finance, I decided to 
+        ```
     },
     {
         title: "Subletty",

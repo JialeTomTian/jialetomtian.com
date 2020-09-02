@@ -17,7 +17,7 @@ import wordDocumentWriter from "../images/wordDocumentWriter.PNG";
 
 const Projects = (props) => {
   const [loadProjects, setLoadProjects] = React.useState(false);
-  const images = [EatingProject, "", Subletty, wordDocumentWriter];
+  const images = [EatingProject, "https://s.wsj.net/img/meta/wsj-social-share.png", Subletty, wordDocumentWriter];
 
   const classes = props;
   return (

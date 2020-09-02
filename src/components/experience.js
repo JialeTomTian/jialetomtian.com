@@ -138,7 +138,7 @@ const Experiences = () => {
                           {experience.position}
                       </DialogTitle>
                       <DialogContent>
-                        <DialogContentText id="alert-dialog-description">
+                        <DialogContentText style={{fontSize: "20px"}} id="alert-dialog-description">
                             {experience.description}
                         </DialogContentText>
                       </DialogContent>
