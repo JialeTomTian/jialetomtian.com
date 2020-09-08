@@ -58,7 +58,7 @@ const Skills = () => {
                 // when window width is <= 499px
                 499: {
                   slidesPerView: 1,
-                  spaceBetweenSlides: 50,
+                  spaceBetweenSlides: 100,
                 },
                 // when window width is <= 999px
                 999: {

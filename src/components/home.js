@@ -40,13 +40,13 @@ const HomePage = () => {
               value: "#ffffff",
             },
             number: {
-              value: 80,
+              value: 120,
               density: {
-                enable: false,
+                enable: true,
               },
             },
             size: {
-              value: 5,
+              value: 10,
               random: true,
               anim: {
                 speed: 4,
@@ -54,7 +54,7 @@ const HomePage = () => {
               },
             },
             line_linked: {
-              enable: true,
+              enable: false,
               color: {
                 value: "#ffffff",
               },
@@ -62,7 +62,7 @@ const HomePage = () => {
             move: {
               random: true,
               speed: 1,
-              direction: "top",
+              direction: "bottom",
               out_mode: "out",
             },
           },

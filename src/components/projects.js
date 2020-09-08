@@ -146,7 +146,9 @@ const Projects = (props) => {
                       aria-describedby="alert-dialog-description"
                     >
                       <DialogTitle id="alert-dialog-title">
-                        {project.title} <br />
+                        <div style={{ fontSize: "30px" }}>
+                          {project.title} <br />
+                        </div>
                         {project.technologies}
                       </DialogTitle>
                       <DialogContent>
@@ -157,12 +159,12 @@ const Projects = (props) => {
                           {project.descriptionT}
                         </DialogContentText>
                         <center>
-                         <a
-                          href={project.github}
-                          style={{ textDecoration: "none" }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        > 
+                          <a
+                            href={project.github}
+                            style={{ textDecoration: "none" }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Button
                               style={{ backgroundColor: "#0093DA" }}
                               color="secondary"

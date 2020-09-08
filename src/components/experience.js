@@ -134,12 +134,15 @@ const Experiences = () => {
                       aria-describedby="alert-dialog-description"
                     >
                       <DialogTitle id="alert-dialog-title">
-                          {experience.location} <br />
-                          {experience.position}
+                        {experience.location} <br />
+                        {experience.position}
                       </DialogTitle>
                       <DialogContent>
-                        <DialogContentText style={{fontSize: "20px"}} id="alert-dialog-description">
-                            {experience.description}
+                        <DialogContentText
+                          style={{ fontSize: "20px" }}
+                          id="alert-dialog-description"
+                        >
+                         {experience.description}
                         </DialogContentText>
                       </DialogContent>
                       <DialogActions>
